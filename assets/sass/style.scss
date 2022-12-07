@@ -17,6 +17,31 @@ body {
 	@include flex;
 }
 
+a {
+	text-decoration: none;
+}
+
+#go-play {
+	outline: none;
+	padding: 40px;
+	color: #c8e4ff;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	border-radius: 10px;
+	background-image: linear-gradient( -135deg, darken(#b5d3ff, 70%) 0%, darken(#3a71ca, 70%) 100% );
+	box-shadow: inset 5px -5px 10px darken($grey, 40%), 1px 6px 10px darken($grey, 40%);
+	transition: all ease-out 0.4s;
+	
+	&:hover{
+		box-shadow: inset 5px -5px 10px darken($grey, 40%), 5px 10px 10px darken($grey, 40%);
+	}
+	
+	&:active{
+		box-shadow: inset 5px -5px 10px darken($grey, 40%), 0px 1px 10px darken($grey, 40%);
+	}
+}
+
 #game-container {
 	position: relative;
 	margin: auto;
@@ -127,21 +152,86 @@ body {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: linear-gradient(-135deg, #f5f7fa 0%, #c3cfe2 100%);
+	background-image: linear-gradient(
+		-135deg,
+		darken(#b5d3ff, 70%) 0%,
+		darken(#3a71ca, 70%) 100%
+	);
 	z-index: 996;
-	transition: all ease-out 0.3s;
+	transition: all ease-out 0.6s;
 
-	@include flex;
+	@include flex($direction: column);
+
+	h2 {
+		font-size: 45px;
+		font-weight: bold;
+		background: -webkit-linear-gradient(0deg, #120e3b 0%, #65c6cc 100%);
+		background: -webkit-linear-gradient(
+			0deg,
+			$--p-1 0%,
+			$--b-2,
+			$--g-3,
+			$--y-1,
+			$--y-4 100%
+		);
+		background-clip: text;
+		color: transparent;
+	}
+
+	#loader {
+		--cell-size: 64px;
+		--cell-spacing: 1px;
+		--border-width: 1px;
+		--cells: 4;
+		--total-size: calc(
+			var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing))
+		);
+
+		display: flex;
+		flex-wrap: wrap;
+		width: var(--total-size);
+		height: var(--total-size);
+
+		> .cell {
+			--cell-color: white;
+			flex: 0 0 var(--cell-size);
+			margin: var(--cell-spacing);
+			background-color: transparent;
+			box-sizing: border-box;
+			border: var(--border-width) solid var(--cell-color);
+
+			animation: 1.5s ripple ease infinite;
+
+			$delays: (2 * 4) - 2;
+			@for $i from 1 through $delays {
+				&.d-#{$i} {
+					animation-delay: $i * 100ms;
+				}
+			}
+
+			@for $i from 1 through length($colors) {
+				&:nth-child(#{$i}) {
+					--cell-color: #{nth($colors, $i)};
+				}
+			}
+		}
+	}
 }
 
-@keyframes loadingBefore {
+@keyframes ripple {
 	0% {
-		transform: translateX(-14px);
+		background-color: transparent;
 	}
-	50% {
-		transform: translateX(14px);
+
+	30% {
+		background-color: var(--cell-color);
 	}
+
+	60% {
+		background-color: transparent;
+	}
+
 	100% {
-		transform: translateX(-14px);
+		background-color: transparent;
 	}
 }
