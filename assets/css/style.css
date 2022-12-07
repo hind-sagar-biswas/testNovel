@@ -7,6 +7,10 @@ body {
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(-135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: url("./../img/background/snow-night-city-3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,13 +19,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.night-back {
-  background-image: url("./../img/background/snow-night-city-3.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 #go-play {
@@ -58,6 +55,7 @@ a {
   background-size: cover;
   background-attachment: scroll;
   overflow: hidden;
+  border: 4px solid #05c7f2;
   box-shadow: inset 5px -5px 10px #1a1a1a, 0px 5px 10px #1a1a1a;
 }
 #game-container #blurer {
@@ -82,15 +80,17 @@ a {
 }
 #game-container #action-box {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -1px;
+  left: -1px;
   padding: 10px;
-  width: calc(100% - 22px);
+  margin: 0px;
+  width: calc(100% - 20px);
   height: 30%;
-  background-color: rgba(69, 93, 101, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 7px 1px #05c7f2;
   border: 1px solid #05c7f2;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   color: #c8e4ff;
   overflow: hidden;
   display: flex;
@@ -106,13 +106,16 @@ a {
   text-shadow: rgb(186, 229, 250) 0 0 10px;
   padding: 10px 20px 10px 100px;
   margin-left: -100px;
-  margin-top: 0px;
+  margin-top: -10px;
   background-color: #05c7f2;
   border-radius: 0 50px 50px 0;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  box-shadow: 0px 5px 10px #1a1a1a;
+  box-shadow: 0px 5px 7px 1px #0496b6;
+}
+#game-container #action-box #dialogue-box #dialogue {
+  margin: 0 10px;
 }
 #game-container #action-box #option-box {
   width: 100%;
@@ -132,17 +135,17 @@ a {
   outline: none !important;
   border: 0;
   outline: none;
-  box-shadow: 0px 5px 10px #1a1a1a;
+  box-shadow: 0px 5px 10px #03758e;
   transition: all 0.3s;
   background: #05c7f2;
-  border-bottom: 4px solid #03758e;
+  border-bottom: 4px solid #049ec0;
 }
 #game-container #action-box #option-box .option:hover {
-  box-shadow: 0px 15px 25px -5px #1a1a1a;
+  box-shadow: 0px 15px 25px -5px #03758e;
   transform: scale(1.03);
 }
 #game-container #action-box #option-box .option:active {
-  box-shadow: 0px 4px 8px #343434;
+  box-shadow: 0px 4px 8px #0389a7;
   transform: scale(0.98);
 }
 

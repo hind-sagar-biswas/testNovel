@@ -2,6 +2,11 @@ $primary: #05c7f2;
 $primary-dark: darken($primary, 50%);
 $grey: grey;
 
+$gradient-1: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+$gradient-2: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+$gradient-3: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+$gradient-4: linear-gradient(-135deg, #f5f7fa 0%, #c3cfe2 100%);
+
 $--p-1: #d4aee0;
 $--p-2: #8975b4;
 $--p-3: #64518a;
