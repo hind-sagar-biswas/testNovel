@@ -1,0 +1,119 @@
+[
+    {
+        "id": -1,
+        "characterName": null,
+        "characterMode": null,
+        "scene": null,
+        "dialogue": "Game Over!",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "Restart",
+                "next": null
+            }
+        ]
+    },
+    {
+        "id": 0,
+        "characterName": null,
+        "characterMode": null,
+        "scene": null,
+        "dialogue": "Completed!",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "Restart",
+                "next": null
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "characterName": null,
+        "characterMode": null,
+        "scene": "night-city",
+        "dialogue": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, aliquid totam accusamus deserunt, praesentium non a odit veniam aperiam blanditiis sed est, iusto mollitia perspiciatis.",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "Next",
+                "next": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "characterName": "protagonist",
+        "characterMode": null,
+        "scene": "night-city",
+        "dialogue": "Hi, I am......... and I was.............",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "Next",
+                "next": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "characterName": "protagonist",
+        "characterMode": null,
+        "scene": "night-city",
+        "dialogue": "Then I suddenly met Yui.....",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "Next",
+                "next": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "characterName": "yui",
+        "characterMode": "base",
+        "scene": "night-city",
+        "dialogue": "H-hello, protagonist-kun... blah blah nlah....",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "Respond positively",
+                "next": 5
+            },
+            {
+                "id": 2,
+                "choice": "Respond negatively",
+                "next": 6
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "characterName": "yui",
+        "characterMode": "base",
+        "scene": "night-city",
+        "dialogue": "Ohh Thank you!",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "End game",
+                "next": 0
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "characterName": "yui",
+        "characterMode": "base",
+        "scene": "night-city",
+        "dialogue": "What?? Let's not see each other again!",
+        "choices": [
+            {
+                "id": 1,
+                "choice": "End game",
+                "next": -1
+            }
+        ]
+    }
+]

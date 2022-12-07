@@ -1,0 +1,8 @@
+{
+    "imagelocation": "assets/img/background/",
+    "scenes": {
+        "night-city": {
+            "image": "night.webp"
+        }
+    }
+}

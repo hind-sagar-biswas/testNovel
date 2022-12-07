@@ -1,0 +1,19 @@
+{
+    "imageLocation" : "assets/img/character/",
+    "characters": {
+        "protagonist": {
+            "firstName": "Protagonist",
+            "secondName": "",
+            "images": {
+                "basic": "protagonist.webp"
+            }
+        },
+        "yui": {
+            "firstName": "Yui",
+            "secondName": "Iga",
+            "images": {
+                "basic": "yui.png"
+            }
+        }
+    }
+}
