@@ -122,3 +122,26 @@ body {
 		}
 	}
 }
+
+#loading {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(-135deg, #f5f7fa 0%, #c3cfe2 100%);
+	z-index: 996;
+	transition: all ease-out 0.3s;
+
+	@include flex;
+}
+
+@keyframes loadingBefore {
+	0% {
+		transform: translateX(-14px);
+	}
+	50% {
+		transform: translateX(14px);
+	}
+	100% {
+		transform: translateX(-14px);
+	}
+}

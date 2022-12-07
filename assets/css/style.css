@@ -114,4 +114,41 @@ body {
 #game-container #action-box #option-box .option:active {
   box-shadow: 0px 4px 8px #343434;
   transform: scale(0.98);
+}
+
+#loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-135deg, #f5f7fa 0%, #c3cfe2 100%);
+  z-index: 996;
+  transition: all ease-out 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: initial;
+}
+
+@-webkit-keyframes loadingBefore {
+  0% {
+    transform: translateX(-14px);
+  }
+  50% {
+    transform: translateX(14px);
+  }
+  100% {
+    transform: translateX(-14px);
+  }
+}
+
+@keyframes loadingBefore {
+  0% {
+    transform: translateX(-14px);
+  }
+  50% {
+    transform: translateX(14px);
+  }
+  100% {
+    transform: translateX(-14px);
+  }
 }/*# sourceMappingURL=style.css.map */

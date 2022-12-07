@@ -113,7 +113,14 @@ const runGame = (response) => {
 // To get the start point/story
 let currentStory = setUpStory(startPoint);
 window.addEventListener("load", () => {
+	const loader = document.getElementById("loading");
+	
 	let story = setUpStory(currentStory.id);
 	if (DEBUG) console.log("Start Story:", story);
 	updateGame(story);
+
+	setTimeout(() => {
+		loader.style.opacity = 0;
+		loader.style.pointerEvents = "none";
+	}, 350);
 });
