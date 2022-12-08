@@ -1,0 +1,15 @@
+{
+  "name": "str-editor",
+  "version": "1.0.0",
+  "description": "Story and character editor for testNovel project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hind Sagar Biswas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4"
+  }
+}
