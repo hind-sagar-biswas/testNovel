@@ -4,12 +4,16 @@
   "description": "Story and character editor for testNovel project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "author": "Hind Sagar Biswas",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
